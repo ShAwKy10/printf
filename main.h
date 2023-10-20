@@ -18,50 +18,50 @@
 #define CONVERT_UNSIGNED    2
 
 /**
- * struct parameters - parameters struct 
- * 
+ * struct parameters - parameters struct
+ *
  * @unsign: flag if unsigned value
- * 
+ *
  * @plus_flag: on if plus falg specified
  * @space_flag: on if space falg specified
  * @hashtag_flag: on if hashtag falg specified
  * @zero_flag: on if zero falg specified
  * @minus_flag: on if minus falg specified
- * 
- * @wigth: field width specified
+ *
+ * @width: field width specified
  * @precision: field precision specified
- * 
+ *
  * @h_modifier: on if h_modifier specified
  * @l_modifier: on if l_modifier specified
- * 
+ *
  */
-typedef struct parameteres
+typedef struct parameters
 {
-    unsigned int unsign              : 1;
+	unsigned int unsign		: 1;
 
-    unsigned int plus_flag          : 1;
-    unsigned int space_flag         : 1;
-    unsigned int hashtag_flag       : 1;
-    unsigned int zero_flag          : 1;
-    unsigned int minus_flag         : 1;
+	unsigned int plus_flag		: 1;
+	unsigned int space_flag		: 1;
+	unsigned int hashtag_flag	: 1;
+	unsigned int zero_flag		: 1;
+	unsigned int minus_flag		: 1;
 
-    unsigned int width;
-    unsigned int precisiion;
+	unsigned int width;
+	unsigned int precision;
 
-    unsigned int h_modifier         : 1;
-    unsigned int l_modifier         : 1;
+	unsigned int h_modifier		: 1;
+	unsigned int l_modifier		: 1;
 } params_t;
 
 /**
  * struct specifier - struct token
- * 
+ *
  * @specifier: format token
  * @f: The function associated
  */
 typedef struct specifier
 {
-    char *specifier;
-    int (*f)(va_list, params_t *);
+	char *specifier;
+	int (*f)(va_list, params_t *);
 } specifier_t;
 
 /*_put.c module*/
@@ -89,7 +89,7 @@ int *get_width(char *s, va_list ap, params_t *params);
 
 /*convert_number.c module*/
 int print_hex(va_list ap, params_t *params);
-int print_HEX   (va_list ap, params_t *params);
+int print_HEX(va_list ap, params_t *params);
 int print_binary(va_list ap, params_t *params);
 int print_octal(va_list ap, params_t *params);
 
