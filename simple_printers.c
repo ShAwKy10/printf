@@ -3,7 +3,7 @@
 /**
  * print_from_to - Print a rang of char addresses
  * @start: Starting address
- * @Stop: Stopping address
+ * @stop: Stopping address
  * @except: Except address
  *
  * Return: Number bytes printed
@@ -50,14 +50,14 @@ int print_rev(va_list ap, params_t *params)
  * @ap: String
  * @params: The parameters struct
  *
- * @return: Number bytes printed
+ * Return: Number bytes printed
  */
 int print_rot13(va_list ap, params_t *params)
 {
 	int i, index;
 	int count = 0;
-	char arr[] = 
-		"NOPQRSTUVWXYZABCDEFGHIGKLM"	"nopqrstuvwxyzabcdefghijklm";
+	char arr[] =
+		"NOPQRSTUVWXYZABCDEFGHIGKLM	nopqrstuvwxyzabcdefghijklm";
 	char *a = va_arg(ap, char *);
 	(void)params;
 
