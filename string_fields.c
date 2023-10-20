@@ -12,7 +12,7 @@ char *get_percision(char *p, va_list ap, params_t *params)
 {
 	int d = 0;
 
-	if(*p != '.')
+	if (*p != '.')
 		return (p);
 	p++;
 	if (*p == '*')
@@ -22,7 +22,7 @@ char *get_percision(char *p, va_list ap, params_t *params)
 	}
 	else
 	{
-		while(_isdigit(*p))
+		while (_isdigit(*p))
 			d = d * 10 + (*p++ - '0');
 	}
 	params->precision = d;
