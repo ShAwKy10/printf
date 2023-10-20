@@ -85,7 +85,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
-int *get_width(char *s, va_list ap, params_t *params);
+char *get_width(char *s, va_list ap, params_t *params);
 
 /*convert_number.c module*/
 int print_hex(va_list ap, params_t *params);
