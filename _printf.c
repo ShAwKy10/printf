@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	if (!format || format[0] == '%' && !format[1])
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 			p++; /*next char*/
 		}
 		p = get_width(p, ap, &params);
-		p = get_percision(p, ap, &params);
+		p = get_precision(p, ap, &params);
 		if (get_modifier(p, &params))
 			p++;
 		if (!get_specifier(p))
