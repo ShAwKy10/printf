@@ -54,7 +54,7 @@ int print_string(va_list ap, params_t *params)
 	unsigned int pad = 0, sum = 0, i = 0, j;
 	(void)params;
 
-	switch ((int) (!str))
+	switch ((int)(!str))
 	case 1:
 		str = NULL_STRING;
 
@@ -110,7 +110,7 @@ int print_S(va_list ap, params_t *params)
 	char *hex;
 	int sum = 0;
 
-	if ((int) (!str))
+	if ((int)(!str))
 		return (_puts(NULL_STRING));
 	for (; *str; str++)
 	{
