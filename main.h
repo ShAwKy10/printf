@@ -109,7 +109,7 @@ int print_number_left_shift(char *str, params_t *params);
 void init_params(va_list ap, params_t *params);
 
 /*string_fields.c module*/
-char *get_precision(char *p, va_list ap, params_t *params);
+char *get_percision(char *p, va_list ap, params_t *params);
 
 /*_printf.c module*/
 int _printf(const char *format, ...);
