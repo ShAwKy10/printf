@@ -118,7 +118,7 @@ int print_S(va_list ap, params_t *params)
 		{
 			sum += _putchar('\\');
 			sum += _putchar('x');
-			hex = convert (*str, 16, 0, params);
+			hex = convert(*str, 16, 0, params);
 			if (!hex[1])
 				sum += _putchar('0');
 			sum += _puts(hex);
